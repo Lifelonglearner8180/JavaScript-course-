@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Insert element in array</title>
+</head>
+   <script>
+    function getElement() {
+     let data = [34,32,56,34,67,35,46,35,78,78];
+    // let newEl = 70;
+    // let position = 2;
+
+    let newEl = document.getElementById('value').value;
+
+    newEl = parseInt(newEl);
+
+    let position = document.getElementById('positionIn').value;
+
+      for(let i=data.length-1 ; i>=0; i--){
+        console.warn( data[i]);
+        if( i>=position){
+          data [i+1] = data[i]
+        
+        if (i==position){
+          data [i] = newEl;
+        };
+      };
+      };
+      console.warn(data);
+
+    }
+
+   /* const newArrays = [30,34,23,5,345,456]
+
+    newArrays.splice(3,0,'sagor','hossain','afif');
+
+    console.log(newArrays);*/
+
+
+    /* we could easily use splice function to add element in array but for the sake of buiding logic we have to show this logic. this is about how logic works.sorting is also a short code but to write short code we have to write lot of raff code */
+
+   </script>
+   <body>
+  <input type="text" placeholder="enter the position" id="positionIn">
+   
+  <input type="text" placeholder="enter the value" id="value" >
+
+  <button onclick="
+  getElement();
+  ">Insert</button>
+
+   </body>
+
+</html>
